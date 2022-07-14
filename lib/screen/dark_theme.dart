@@ -19,7 +19,24 @@ class _DarkThemeScreenState extends State<DarkThemeScreen> {
         title: const Text("Theme"),
       ),
       body: Column(
-        children: [],
+        children: [
+          RadioListTile<ThemeMode>(
+              title: const Text('Light Mode'),
+              value: ThemeMode.light,
+              groupValue: themeChanger.themeMode,
+              onChanged: themeChanger.setTheme),
+          RadioListTile<ThemeMode>(
+              activeColor: Colors.purple,
+              title: const Text('Dark Mode'),
+              value: ThemeMode.dark,
+              groupValue: themeChanger.themeMode,
+              onChanged: themeChanger.setTheme),
+          RadioListTile<ThemeMode>(
+              title: const Text('System Mode'),
+              value: ThemeMode.system,
+              groupValue: themeChanger.themeMode,
+              onChanged: themeChanger.setTheme)
+        ],
       ),
     );
   }

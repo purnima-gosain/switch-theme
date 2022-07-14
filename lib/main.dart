@@ -23,8 +23,13 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             themeMode: themeChanger.themeMode,
             theme: ThemeData(
+              brightness: Brightness.light,
               primarySwatch: Colors.pink,
             ),
+            darkTheme: ThemeData(
+                appBarTheme: AppBarTheme(color: Colors.purple),
+                brightness: Brightness.dark,
+                primarySwatch: Colors.purple),
             home: const DarkThemeScreen(),
           );
         }));
