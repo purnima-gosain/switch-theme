@@ -1,4 +1,5 @@
 # switch_theme
+Here we are going to see how to change the app theme from light to dark.
 
 A new Flutter project.
 
